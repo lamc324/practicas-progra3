@@ -19,32 +19,47 @@ public class Practicaswing extends JFrame {
     JButton clean = new JButton("Limpiar");
     JButton accept = new JButton("Aceptar");
     
-    String[]  generos = {"Masculino", "Femenino"};
-    JComboBox generoBox = new JComboBox(generos);
+    JTextArea result = new JTextArea(4, 20);
+    
+    String[]  genders = {"Masculino", "Femenino"};
+    JComboBox genderBox = new JComboBox(genders);
 
     public Practicaswing() {
         super("Validar Usuario");
-        setSize(300, 200);
+        setSize(300, 480);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         
         JPanel panel = new JPanel();
         JLabel usernameLabel = new JLabel("Usuario:   ");
         JLabel phoneLabel = new JLabel("Telefono: ");
+        JLabel genderLabel = new JLabel("Genero:                                 ");
+        JLabel resultLabel = new JLabel("Result: ");
 
         //set the name to components
-        usernameLabel.setName("lblUsername");
+        usernameLabel.setName("lblName");
         phoneLabel.setName("lblPhone");
+        genderLabel.setName("lblGender");
+        resultLabel.setName("lblResult");
+        
         user.setName("username");
         phone.setName("phone");
-        clean.setName("limpiar");
-        accept.setName("aceptar");
+        genderBox.setName("gender");
+        clean.setName("clean");
+        accept.setName("ok");
+        
+        result.setLineWrap(true);
+        result.setWrapStyleWord(true);
+        result.setEnabled(false);
 
         panel.setName("Form");
         panel.add(usernameLabel);
         panel.add(user);
         panel.add(phoneLabel);
         panel.add(phone);
-        panel.add(generoBox);
+        panel.add(genderLabel);
+        panel.add(genderBox);
+        panel.add(resultLabel);
+        panel.add(result);
         panel.add(clean);
         panel.add(accept);
         add(panel);
