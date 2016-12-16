@@ -23,4 +23,10 @@ public class ImpresoraNormal extends Impresora {
         super("PDF", "A4", true, texto);
     }
 
+    @Override
+    public String toString() {
+        return super.toString();
+    }
+
+    
 }

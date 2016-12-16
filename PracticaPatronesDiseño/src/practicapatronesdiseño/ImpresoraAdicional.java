@@ -20,7 +20,14 @@ public class ImpresoraAdicional extends Impresora {
     }
 
     public ImpresoraAdicional(String texto) {
-        super("EXCEL", "A3", false, texto);
+        super("excel", "a3", false, texto);
     }
+
+    @Override
+    public String toString() {
+        return super.toString();
+    }
+    
+    
 
 }

@@ -18,4 +18,11 @@ public class Impresora {
         this.texto = texto;
     }
 
+    @Override
+    public String toString() {
+        return "Impresora {" + "tipoDocumento=" + tipoDocumento + ", hoja=" + hoja + ", color=" + color + ", texto=" + texto + '}';
+    }
+    
+    
+
 }
