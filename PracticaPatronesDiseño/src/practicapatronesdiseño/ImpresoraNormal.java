@@ -9,18 +9,17 @@ package practicapatronesdiseño;
  *
  * @author Estudiante
  */
-public class ImpresoraAdicional extends Impresora {
-
-    public ImpresoraAdicional() {
-
+public class ImpresoraNormal extends Impresora{
+    
+    public ImpresoraNormal(){
+        
     }
 
-    public ImpresoraAdicional(String tipoDocumento, String hoja, boolean color, String texto) {
+    public ImpresoraNormal(String tipoDocumento, String hoja, boolean color, String texto) {
         super(tipoDocumento, hoja, color, texto);
     }
-
-    public ImpresoraAdicional(String texto) {
-        super("EXCEL", "A3", false, texto);
+    
+    public ImpresoraNormal(String texto) {
+        super("PDF", "A4",true,texto);
     }
-
 }
